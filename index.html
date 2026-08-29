@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodBasket.co</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modals.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <!-- HEADER PART -->
+    <header>
+        <nav class="navbar flex between wrapper">
+            <div class="logo-wrapper">
+                <img src="Products_Images/logo.png" alt="Food Basket" class="logo-icon">
+                <a href="#" class="logo">Food Basket.co</a>
+            </div>
+
+            <!-- DESKTOP MENU -->
+            <ul class="navlist flex gap-3">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact us</a>
+                </li>
+            </ul>
+
+            <div class="desktop-action flex gap-2">
+                <a href="#" class="cart-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-value">0</span>
+                </a>
+                <a href="#" class="btn" id="signInBtn">
+                    Sign in
+                    &nbsp;
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </a>
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <button class="user-greeting" id="userGreeting">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <span id="userName">User</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <a href="#orders"><i class="fa-solid fa-box"></i> My Orders</a>
+                        <a href="#favorites"><i class="fa-solid fa-heart"></i> Favorites</a>
+                        <a href="#settings"><i class="fa-solid fa-gear"></i> Settings</a>
+                        <a href="#admin" id="adminLink"><i class="fa-solid fa-shield-halved"></i> Admin Panel</a>
+                        <a href="#" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>
+
+                <a href="#" class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+
+            <!-- MOBILE MENU -->
+            <ul class="mobile-menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact us</a>
+                </li>
+                <li>
+                    <a href="#" class="btn" id="signInBtnMobile">
+                        Sign in
+                        &nbsp;
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    <!-- TOP CONTACT BAR -->
+    <div class="top-contact-bar">
+        <div class="wrapper flex between">
+            <div class="contact-line">
+                <span><i class="fa-solid fa-phone"></i> <a href="tel:+917973059398">+91-79730-59398</a></span>
+                <span class="sep">|</span>
+                <span><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/917973059398" target="_blank" rel="noopener">Chat</a></span>
+                <span class="sep">|</span>
+                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:manveerawal1999@gmail.com" target="_blank" rel="noopener">manveerawal1999@gmail.com</a></span>
+            </div>
+            <div class="emergency">
+                <strong>Emergency:</strong> For events today call <a href="tel:+917973059398">+91-79730-59398</a>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <!-- SECTIONS PART -->
+    <main>
+        <section>
+            <div class="hero-section flex wrapper gap-4">
+                <div class="content">
+                    <h1>
+                        Enjoy Your Delicious
+                        <span>Food</span>
+                    </h1>
+                    <p class="para">
+                        We will fill your tummy with delicious <br>
+                        food with fast delivery.
+                    </p>
+                    <div class="flex gap-2">
+                        <a href="#" class="btn">Order now</a>
+
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="Products_Images/delivery-boy.png">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrapper p-top">
+                <div class="text-center">
+                    <h5>Our Services</h5>
+                    <h2>How does it work?</h2>
+                </div>
+
+                <div class="flex text-center mt-4 gap-4">
+                    <div class="service-card">
+                        <div class="image-container">
+                            <img src="Products_Images/easy-to-order.png">
+                        </div>
+                        <h3>Easy to Order</h3>
+                        <p>You only need a few steps in ordering food.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="image-container">
+                            <img src="Products_Images/fast-delivery.png">
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>Delivery that is always on-time even faster.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="image-container">
+                            <img src="Products_Images/best-quality.png">
+                        </div>
+                        <h3>Best Quality</h3>
+                        <p>Not only fast but quality is also number one.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrapper p-top">
+                <div class="text-center">
+                    <h5>Our Menu</h5>
+                    <h2>The Most Popular Dishes in our Menu</h2>
+                </div>
+
+                <div class="card-list text-center flex mt-4 gap-2">
+                    <!-- <div class="order-card">
+                        <div class="card-image">
+                            <img src="Products_Images/burger.png">
+                        </div>
+                        <h4>Double Beef Burger</h4>
+                        <h4 class="price">&#8377;250</h4>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div> -->
+                </div>
+
+                <!-- CART TABLE -->
+                <div class="cart-tab">
+                    <h3>Your Cart</h3>
+
+                    <div class="cart-list">
+                    <!----    <div class="item">
+                            <div class="item-image">
+                                <img src="/Products_Images/burger.png">
+                            </div>
+                            <div>
+                                <h4>Double Beef Burger</h4>
+                                <h4 class="item-total">&#8377;250</h4>
+                            </div>
+                            <div class="flex">
+                                <a href="#" class="quantity-btn">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <h4 class="quantity-value">1</h4>
+                                <a href="#" class="quantity-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="total-container">
+                        <h4>Total:</h4>
+                        <h4 class="cart-total">&#8377;0.00</h4>
+                    </div>
+
+                    <div class="btn-container flex gap-2">
+                        <a href="#" class="btn close-btn">Close</a>
+                        <a href="#" class="btn close-btn">Check out</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+        </section>
+
+        <section>
+            <div class="wrapper p-top">
+                <div class="app-container flex between">
+                    <div class="image-container">
+                        <img src="Products_Images/mobile-app.png">
+                    </div>
+
+                    <div class="app-content">
+                        <h5>Our Application (COMING SOON)</h5>
+                        <h2>Simple Way To<br>Order Your Food</h2>
+                        <p class="para">
+                            Discover food wherever and whenever<br>
+                            and get your food delivery quickly.
+                        </p>
+                        <a href="#" class="btn">Get the App</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrapper p-top">
+                <div class="text-center">
+                    <h5>Our News's Letter</h5>
+                    <h2>Subscribe To Our News-Letter</h2>
+                    <p class="para m-auto">
+                        We recommend you to subscribe our newspaper, drop your email below to get daily updates about
+                        us.
+                    </p>
+
+                    <label class="input-container flex">
+                        <input type="email" name="email" id="email" placeholder="Enter your email address"
+                            autocomplete="off">
+                        <a href="#" class="btn">Subscribe</a>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <div class="wrapper p-top">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h5>Contact Us</h5>
+                        <h2>We’re here to help</h2>
+                        <p class="para">Most messages answered within 45 minutes. If not resolved in 24h, please escalate at <a href="mailto:manveerawal1999@gmail.com?subject=Escalation:%20Support%20request">My Email -> manveerawal1999@gmail.com</a>.</p>
+                    </div>
+                    <form class="contact-form" action="#" onsubmit="event.preventDefault(); this.classList.add('sent');">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" required autocomplete="name">
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" required autocomplete="email">
+                        </label>
+                        <label>
+                            <span>Phone</span>
+                            <input type="tel" name="phone" placeholder="+91-XXXXXXXXXX" autocomplete="tel">
+                        </label>
+                        <label>
+                            <span>WhatsApp</span>
+                            <input type="tel" name="whatsapp" placeholder="WhatsApp number (optional)">
+                        </label>
+                        <button class="btn" type="submit">Send & Get Help</button>
+                        <div class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER PART -->
+    <footer>
+        <div class="footer-container flex">
+            <div class="flex-wrapper gap-4">
+                <div class="footer-wrapper">
+                    <a href="#" class="logo">Food Basket.</a>
+
+                    <p class="mt-one-half">
+                        We will fill your tummy with delicious <br>
+                        food with fast delivery.
+                    </p>
+                    <div class="flex gap-2 mt-one-half">
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="footer-wrapper">
+                <li>
+                    <h4>Our Menu</h4>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Special</a>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Popular</a>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Category</a>
+                </li>
+            </ul>
+
+            <ul class="footer-wrapper">
+                <li>
+                    <h4>Company</h4>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Why Food Basket</a>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Partner with us</a>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">About us</a>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">FAQ's</a>
+                </li>
+            </ul>
+
+            <ul class="footer-wrapper">
+                <li>
+                    <h4>Support</h4>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Account</a>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Support Center</a>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Feedback</a>
+                </li>
+                <li class="mt-one-half">
+                    <a href="#" class="footer-link">Contacts</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+
+
+    <!-- SIGN IN / SIGN UP MODAL -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-overlay"></div>
+        <div class="auth-container">
+            <button class="auth-close" id="authClose">&times;</button>
+            
+            <!-- Tab switcher -->
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="signin">Sign In</button>
+                <button class="auth-tab" data-tab="signup">Sign Up</button>
+            </div>
+
+            <!-- Sign In View -->
+            <div class="auth-view active" id="signinView">
+                <h2>Welcome back</h2>
+                <p class="auth-subtitle">Sign in to reorder in seconds and track deliveries live.</p>
+
+                <!-- Social Login -->
+                <div class="social-login">
+                    <button class="social-btn google">
+                        <i class="fa-brands fa-google"></i> Google
+                    </button>
+                    <button class="social-btn apple">
+                        <i class="fa-brands fa-apple"></i> Apple
+                    </button>
+                    <button class="social-btn facebook">
+                        <i class="fa-brands fa-facebook-f"></i> Facebook
+                    </button>
+                </div>
+
+                <div class="divider">or continue with</div>
+
+                <!-- Sign In Form -->
+                <form class="auth-form" id="signinForm">
+                    <label>
+                        <span>Email or Phone</span>
+                        <input type="text" name="emailPhone" required autocomplete="username">
+                    </label>
+                    <label class="password-field">
+                        <span>Password</span>
+                        <input type="password" name="password" required autocomplete="current-password">
+                        <button type="button" class="toggle-password" aria-label="Show password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </label>
+                    <div class="auth-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="link-small">Forgot password?</a>
+                    </div>
+                    <button class="btn auth-submit" type="submit">Sign In</button>
+                    <button class="btn-secondary" type="button" id="otpSignIn">
+                        <i class="fa-brands fa-whatsapp"></i> Sign in with OTP
+                    </button>
+                    <button class="btn-ghost" type="button" id="guestCheckout">Continue as Guest →</button>
+                </form>
+            </div>
+
+            <!-- Sign Up View -->
+            <div class="auth-view" id="signupView">
+                <h2>Create account</h2>
+                <p class="auth-subtitle">Join and get 10% off your first order!</p>
+
+                <!-- Social Login -->
+                <div class="social-login">
+                    <button class="social-btn google">
+                        <i class="fa-brands fa-google"></i> Google
+                    </button>
+                    <button class="social-btn apple">
+                        <i class="fa-brands fa-apple"></i> Apple
+                    </button>
+                    <button class="social-btn facebook">
+                        <i class="fa-brands fa-facebook-f"></i> Facebook
+                    </button>
+                </div>
+
+                <div class="divider">or sign up with</div>
+
+                <!-- Sign Up Form -->
+                <form class="auth-form" id="signupForm">
+                    <label>
+                        <span>Full Name</span>
+                        <input type="text" name="name" required autocomplete="name">
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" required autocomplete="email">
+                    </label>
+                    <label>
+                        <span>Phone</span>
+                        <input type="tel" name="phone" placeholder="+91-XXXXXXXXXX" required autocomplete="tel">
+                    </label>
+                    <label class="password-field">
+                        <span>Password</span>
+                        <input type="password" name="password" required autocomplete="new-password">
+                        <button type="button" class="toggle-password" aria-label="Show password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                        <small class="password-strength"></small>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the <a href="#" id="termsLink">Terms & Conditions</a></span>
+                    </label>
+                    <button class="btn auth-submit" type="submit">Create Account</button>
+                    <button class="btn-ghost" type="button" id="guestCheckoutSignup">Continue as Guest →</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- WELCOME ANIMATION -->
+    <div class="welcome-popup" id="welcomePopup">
+        <div class="welcome-content">
+            <div class="wave-emoji">👋</div>
+            <h2>Welcome back!</h2>
+            <p id="welcomeMessage">Hello, User!</p>
+        </div>
+    </div>
+
+    <!-- TERMS & CONDITIONS MODAL -->
+    <div class="terms-modal" id="termsModal">
+        <div class="terms-overlay"></div>
+        <div class="terms-container">
+            <button class="terms-close" id="termsClose">&times;</button>
+            <h2>Terms & Conditions</h2>
+            <div class="terms-content">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By accessing and using Food Basket's services, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                
+                <h3>2. Use of Services</h3>
+                <p>Our service is available for personal, non-commercial use only. You agree to use our platform in accordance with all applicable laws and regulations.</p>
+                
+                <h3>3. Account Registration</h3>
+                <p>You must provide accurate, current, and complete information during the registration process. You are responsible for maintaining the confidentiality of your account credentials.</p>
+                
+                <h3>4. Orders and Payments</h3>
+                <p>All orders are subject to acceptance and availability. Prices are subject to change without notice. Payment must be made at the time of order placement.</p>
+                
+                <h3>5. Delivery Queries</h3>
+                <p>We strive to deliver within the estimated time frame. However, delivery times are approximate and may vary due to circumstances beyond our control.</p>
+                
+                <h3>6. Cancellation and Refunds</h3>
+                <p>Orders can be cancelled within 5 minutes of placement. Refunds will be processed within 5-7 business days for eligible cancellations.</p>
+                
+                <h3>7. Food Safety</h3>
+                <p>We partner with certified restaurants. However, we are not responsible for food quality issues. Please report any concerns immediately.</p>
+                
+                <h3>8. Privacy</h3>
+                <p>Your personal information will be handled in accordance with our Privacy Policy. We do not sell your data to third parties.</p>
+                
+                <h3>9. Intellectual Property</h3>
+                <p>All content on this platform, including logos, text, and images, is the property of Food Basket and protected by copyright laws.</p>
+                
+                <h3>10. Limitation of Liability</h3>
+                <p>Food Basket shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.</p>
+                
+                <h3>11. Changes to Terms</h3>
+                <p>We reserve the right to modify these terms at any time. Continued use of our service constitutes acceptance of modified terms.</p>
+                
+                <h3>12. Contact Us</h3>
+                <p>For questions about these terms, please contact us at manveerawal1999@gmail.com or call +91-79730-59398.</p>
+            </div>
+            <button class="btn" id="acceptTerms">I Accept</button>
+        </div>
+    </div>
+
+    <!-- My Orders Modal -->
+    <div class="modal-overlay" id="ordersModal">
+        <div class="orders-modal">
+            <button class="close-modal" id="closeOrders">&times;</button>
+            <h2>My Orders</h2>
+            <div class="orders-content" id="ordersContent">
+                <div class="empty-state">
+                    <i class="fa-solid fa-receipt"></i>
+                    <p>No orders yet!</p>
+                    <medium>Your order history will appear here!</medium>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Modal -->
+    <div class="modal-overlay" id="favoritesModal">
+        <div class="favorites-modal">
+            <button class="close-modal" id="closeFavorites">&times;</button>
+            <h2>My Favorites</h2>
+            <div class="favorites-content" id="favoritesContent">
+                <div class="empty-state">
+                    <i class="fa-solid fa-heart"></i>
+                    <p>No favorites yet!</p>
+                    <medium>Start adding your favorite items here!</medium>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settingsModal">
+        <div class="settings-modal">
+            <button class="close-modal" id="closeSettings">&times;</button>
+            <h2>Settings</h2>
+            <div class="settings-content">
+                <div class="settings-section">
+                    <h3><i class="fa-solid fa-user"></i> Profile Information</h3>
+                    <div class="settings-item">
+                        <label>Name:</label>
+                        <input type="text" id="settingsName" placeholder="Your Name">
+                    </div>
+                    <div class="settings-item">
+                        <label>Email:</label>
+                        <input type="email" id="settingsEmail" placeholder="your@email.com">
+                    </div>
+                    <div class="settings-item">
+                        <label>Phone:</label>
+                        <input type="tel" id="settingsPhone" placeholder="+91-XXXXX-XXXXX">
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3><i class="fa-solid fa-location-dot"></i> Delivery Address</h3>
+                    <div class="settings-item">
+                        <label>Address Line 1:</label>
+                        <input type="text" id="settingsAddress1" placeholder="Street Address">
+                    </div>
+                    <div class="settings-item">
+                        <label>Address Line 2:</label>
+                        <input type="text" id="settingsAddress2" placeholder="Apartment, Suite, etc.">
+                    </div>
+                    <div class="settings-item-group">
+                        <div class="settings-item">
+                            <label>City:</label>
+                            <input type="text" id="settingsCity" placeholder="for e.g., Patiala">
+                        </div>
+                        <div class="settings-item">
+                            <label>Pin Code:</label>
+                            <input type="text" id="settingsPincode" placeholder="for e.g., 147001">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
+                    <div class="settings-toggle">
+                        <label>
+                            <input type="checkbox" id="settingsOrderUpdates" checked>
+                            <span>Order Updates</span>
+                        </label>
+                    </div>
+                    <div class="settings-toggle">
+                        <label>
+                            <input type="checkbox" id="settingsPromotions" checked>
+                            <span>Promotional Offers</span>
+                        </label>
+                    </div>
+                    <div class="settings-toggle">
+                        <label>
+                            <input type="checkbox" id="settingsWhatsApp">
+                            <span>WhatsApp Notifications</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3><i class="fa-solid fa-credit-card"></i> Payment Methods</h3>
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <i class="fa-solid fa-wallet"></i>
+                            <span>Cash on Delivery</span>
+                            <input type="radio" name="payment" checked>
+                        </div>
+                        <div class="payment-option">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <span>Credit/Debit Cards</span>
+                            <input type="radio" name="payment">
+                        </div>
+                        <div class="payment-option">
+                            <i class="fa-solid fa-building-columns"></i>
+                            <span>UPI / Net Banking</span>
+                            <input type="radio" name="payment">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn" id="saveSettings">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal-overlay" id="adminModal">
+        <div class="admin-modal">
+            <button class="close-modal" id="closeAdmin">&times;</button>
+            <h2>Admin Panel - Manage Products</h2>
+            <div class="admin-content">
+                <div class="admin-section">
+                    <h3><i class="fa-solid fa-plus-circle"></i> Add New Product</h3>
+                    <form id="addProductForm" class="product-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Product Name <span class="required">*</span></label>
+                                <input type="text" id="productName" required placeholder="e.g., Margherita Pizza">
+                            </div>
+                            <div class="form-group">
+                                <label>Price (₹) <span class="required">*</span></label>
+                                <input type="number" id="productPrice" required placeholder="e.g., 299" min="1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Image Filename <span class="required">*</span></label>
+                            <input type="text" id="productImage" required placeholder="e.g., pizza.png">
+                            <small>Upload image to Products_Images folder first</small>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa-solid fa-plus"></i> Add Product
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                <i class="fa-solid fa-rotate-left"></i> Reset
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="admin-section">
+                    <h3><i class="fa-solid fa-list"></i> Current Products</h3>
+                    <div class="products-table-container">
+                        <table class="products-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsTableBody">
+                                <!-- Products will be loaded here dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="admin-section">
+                    <h3><i class="fa-solid fa-download"></i> Export/Import Data</h3>
+                    <div class="export-import-actions">
+                        <button class="btn btn-success" id="exportProducts">
+                            <i class="fa-solid fa-download"></i> Export Products (JSON)
+                        </button>
+                        <button class="btn btn-info" id="downloadTemplate">
+                            <i class="fa-solid fa-file-code"></i> Download Template
+                        </button>
+                    </div>
+                    <p class="info-text">
+                        <i class="fa-solid fa-info-circle"></i> 
+                        Note: Changes are saved in browser's localStorage. Export regularly to backup your data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- Admin Password Modal -->
+            <div class="modal-overlay" id="adminPasswordModal">
+                <div class="admin-pass-modal">
+                    <button class="close-modal" id="closeAdminPass">&times;</button>
+                    <h2>Admin Access</h2>
+                    <div class="admin-pass-content">
+                        <p>Please enter the admin password to continue.</p>
+                        <div class="pass-input-group">
+                            <input type="password" id="adminPasswordInput" placeholder="Enter admin password">
+                            <button id="toggleAdminPass" class="toggle-pass" aria-label="Show/Hide password">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="error-text" id="adminPassError" style="display:none;">Incorrect password. Try again.</div>
+                        <div class="form-actions">
+                            <button class="btn btn-secondary" id="adminPassCancel">Cancel</button>
+                            <button class="btn btn-primary" id="adminPassSubmit">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        // Get your key from: https://dashboard.emailjs.com/admin/account
+        emailjs.init('vQUnPM6u988yc_7W5'); // Replace with your actual public key
+    </script>
+    
+    <!-- Modals JavaScript -->
+    <script src="modals.js"></script>
+    <!-- Admin Panel JavaScript -->
+    <script src="admin.js"></script>
+</body>
+
+</html>

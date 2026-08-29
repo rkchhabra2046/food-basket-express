@@ -1,0 +1,352 @@
+/* ADMIN PANEL MODAL */
+.admin-modal {
+    background: var(--pure-white);
+    border-radius: 2rem;
+    width: 95%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+.admin-modal h2 {
+    padding: 2rem 2.5rem;
+    margin: 0;
+    border-bottom: 2px solid var(--gold-finger);
+    color: var(--lead);
+    font-size: 2.8rem;
+}
+
+.admin-content {
+    padding: 2.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.admin-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--hint-yellow);
+    border-radius: 1.5rem;
+}
+
+.admin-section h3 {
+    font-size: 2rem;
+    color: var(--lead);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h3 i {
+    color: var(--gold-finger);
+}
+
+/* PRODUCT FORM */
+.product-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--lead);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group .required {
+    color: #ff4757;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--gold-finger);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: #666;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background: var(--gold-finger);
+    color: var(--lead);
+    flex: 1;
+}
+
+.btn-primary:hover {
+    background: #d4a10d;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+    flex: 1;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #138496;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.btn-edit {
+    background: #ffc107;
+    color: var(--lead);
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+}
+
+.btn-edit:hover {
+    background: #e0a800;
+}
+
+/* PRODUCTS TABLE */
+.products-table-container {
+    background: white;
+    border-radius: 1rem;
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table thead {
+    background: var(--gold-finger);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.products-table th {
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1.5rem;
+    color: var(--lead);
+    font-weight: 700;
+    border-bottom: 2px solid var(--lead);
+}
+
+.products-table td {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.4rem;
+    color: var(--lead);
+    border-bottom: 1px solid #ddd;
+}
+
+.products-table tbody tr:hover {
+    background: var(--hint-yellow);
+}
+
+.products-table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.products-table .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* EXPORT/IMPORT SECTION */
+.export-import-actions {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.export-import-actions .btn {
+    flex: 1;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.info-text {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-text i {
+    color: #17a2b8;
+    font-size: 2rem;
+}
+
+/* ADMIN PASSWORD MODAL */
+.admin-pass-modal {
+    background: var(--pure-white);
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 480px;
+    padding-bottom: 2rem;
+    position: relative;
+    animation: slideUp 0.25s ease;
+}
+
+.admin-pass-modal h2 {
+    padding: 1.6rem 2rem;
+    margin: 0;
+    border-bottom: 2px solid var(--hint-yellow);
+}
+
+.admin-pass-content {
+    padding: 2rem;
+}
+
+.admin-pass-content p {
+    color: var(--lead);
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.pass-input-group {
+    position: relative;
+}
+
+#adminPasswordInput {
+    width: 100%;
+    padding: 1.2rem 4.2rem 1.2rem 1.4rem;
+    border: 2px solid #ddd;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+#adminPasswordInput:focus {
+    outline: none;
+    border-color: var(--gold-finger);
+}
+
+.toggle-pass {
+    position: absolute;
+    top: 50%;
+    right: 0.6rem;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #666;
+}
+
+.error-text {
+    margin-top: 0.8rem;
+    color: #dc3545;
+    font-size: 1.4rem;
+}
+
+.admin-pass-content .form-actions {
+    margin-top: 1.4rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 780px) {
+    .admin-modal {
+        width: 98%;
+        max-height: 95vh;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .export-import-actions {
+        flex-direction: column;
+    }
+    
+    .products-table {
+        font-size: 1.2rem;
+    }
+    
+    .products-table th,
+    .products-table td {
+        padding: 1rem;
+    }
+}
